@@ -1,0 +1,34 @@
+Total word tokens in document: 251
+
+========================================================================
+1. NLTK stop-word removal
+========================================================================
+Number of NLTK English stop words: 198
+After removal: 165 tokens
+['Artificial', 'intelligence', 'changing', 'way', 'people', 'live', 'work', 'India', 'last', 'decade', 'country', 'seen', 'rapid', 'growth', 'digital', 'services', 'companies', 'Google', 'Microsoft', 'Infosys', 'opened', 'large', 'research', 'centres', 'Bengaluru']
+
+========================================================================
+2. spaCy stop-word removal
+========================================================================
+After removal: 153 tokens (spaCy has 326 stop words)
+['Artificial', 'intelligence', 'changing', 'way', 'people', 'live', 'work', 'India', 'decade', 'country', 'seen', 'rapid', 'growth', 'digital', 'services', 'companies', 'Google', 'Microsoft', 'Infosys', 'opened', 'large', 'research', 'centres', 'Bengaluru', 'Hyderabad']
+
+========================================================================
+3. Custom stop-word list (domain specific)
+========================================================================
+After removal: 158 tokens
+
+========================================================================
+4. Most frequent words before / after removal
+========================================================================
+Before: [('and', 14), ('the', 10), ('in', 8), ('to', 8), ('are', 5), ('of', 4), ('artificial', 3), ('intelligence', 3)]
+After : [('artificial', 3), ('intelligence', 3), ('india', 3), ('use', 3), ('models', 3), ('languages', 3), ('people', 2), ('country', 2)]
+
+========================================================================
+5. Summary
+========================================================================
+NLTK   :  165 tokens left  (34.3% reduction)
+spaCy  :  153 tokens left  (39.0% reduction)
+Custom :  158 tokens left  (37.1% reduction)
+
+Cleaned document saved to /home/claude/NLP-Lab-Programs/outputs/03_cleaned_document.txt

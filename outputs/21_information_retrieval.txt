@@ -1,0 +1,55 @@
+
+========================================================================
+Building the inverted index
+========================================================================
+60 documents, 162 unique terms
+Example posting list  'cricket': {10: 1, 21: 1}
+
+========================================================================
+Search results
+========================================================================
+
+QUERY: cricket team won the final match
+  1. score=0.381 [sports    ] The cricket team defeated rivals in the tournament in front of a cheering stadium crowd.
+  2. score=0.377 [sports    ] The cricket team broke the national record in front of a cheering stadium crowd.
+  3. score=0.249 [sports    ] The hockey squad won the championship match in front of a cheering stadium crowd.
+  4. score=0.137 [sports    ] The Olympic athlete secured a place in the league finals under the new coach.
+  5. score=0.137 [sports    ] The Olympic athlete secured a place in the league finals during the season opener.
+  Precision@5 for category 'sports' = 1.00
+
+QUERY: new vaccine and cancer treatment
+  1. score=0.384 [health    ] The health ministry developed a new vaccine for infection during the clinical trial.
+  2. score=0.351 [health    ] Doctors developed a new vaccine for infection according to the medical journal.
+  3. score=0.247 [health    ] Doctors started a cancer screening program across rural clinics.
+  4. score=0.230 [health    ] The health ministry started a cancer screening program across rural clinics.
+  5. score=0.126 [sports    ] The Olympic athlete defeated rivals in the tournament under the new coach.
+  Precision@5 for category 'health' = 0.80
+
+QUERY: machine learning platform for cloud
+  1. score=0.344 [technology] The cloud provider announced a cybersecurity update for its servers at the developer conference.
+  2. score=0.340 [technology] The cloud provider unveiled a faster processor at the developer conference.
+  3. score=0.331 [technology] The cloud provider announced a cybersecurity update for its servers for enterprise customers.
+  4. score=0.309 [technology] The cloud provider introduced a smartphone with an improved camera at the developer conference.
+  5. score=0.304 [technology] The cloud provider unveiled a faster processor to improve data privacy.
+  Precision@5 for category 'technology' = 1.00
+
+QUERY: election and national budget
+  1. score=0.407 [politics  ] The prime minister debated the national budget policy after a heated session.
+  2. score=0.339 [politics  ] The election commission announced the election schedule following the cabinet meeting.
+  3. score=0.190 [politics  ] The election commission signed a trade agreement with neighbouring countries amid public protests.
+  4. score=0.187 [sports    ] The football club broke the national record during the season opener.
+  5. score=0.173 [politics  ] The parliament passed a new bill on taxation ahead of the general election.
+  Precision@5 for category 'politics' = 0.80
+
+QUERY: bank interest rates and profits
+  1. score=0.381 [business  ] The central bank reported record quarterly profits in the third quarter.
+  2. score=0.339 [business  ] The retail company raised interest rates to control inflation according to the annual report.
+  3. score=0.319 [business  ] The stock market raised interest rates to control inflation according to the annual report.
+  4. score=0.291 [business  ] The retail company raised interest rates to control inflation as investors gained confidence.
+  5. score=0.179 [business  ] The retail company reported record quarterly profits according to the annual report.
+  Precision@5 for category 'business' = 1.00
+
+========================================================================
+Evaluation
+========================================================================
+Mean Precision@5 over 5 queries = 0.92

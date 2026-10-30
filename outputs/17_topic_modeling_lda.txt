@@ -1,0 +1,50 @@
+Document-term matrix: (60, 143)
+
+========================================================================
+Top words of the 5 discovered topics
+========================================================================
+Topic 0: tournament, defeated, rivals, stadium, crowd, cheering, hockey, squad
+Topic 1: startup, public, health, rural, clinics, announced, new, according
+Topic 2: provider, cloud, update, servers, cybersecurity, trade, countries, signed
+Topic 3: record, company, retail, according, report, annual, football, club
+Topic 4: trial, clinical, doctors, new, prime, minister, diet, regular
+
+========================================================================
+Document-topic distribution (first 6 documents)
+========================================================================
+     T0    T1    T2    T3    T4
+0  0.03  0.03  0.03  0.03  0.90
+1  0.90  0.03  0.03  0.03  0.03
+2  0.02  0.02  0.02  0.02  0.91
+3  0.02  0.02  0.02  0.02  0.91
+4  0.02  0.02  0.02  0.02  0.91
+5  0.02  0.02  0.02  0.02  0.91
+['health', 'politics', 'health', 'health', 'politics', 'sports']
+
+========================================================================
+Topic vs original category (how well topics match labels)
+========================================================================
+category  business  health  politics  sports  technology
+topic                                                   
+0                1       0         2       6           0
+1                4       4         1       0           0
+2                2       0         5       0          11
+3                5       0         2       4           0
+4                0       8         2       2           1
+
+========================================================================
+Infer topic of unseen text
+========================================================================
+Topic 3 (p=0.70) <- the football team scored a goal in the final
+Topic 4 (p=0.53) <- doctors started a vaccine trial in the hospital
+
+Model perplexity: 188.3 (lower is better)
+
+========================================================================
+Optional: gensim LDA
+========================================================================
+(0, '0.040*"developer" + 0.040*"conference" + 0.039*"cloud" + 0.039*"provider" + 0.031*"faster"')
+(1, '0.033*"stadium" + 0.033*"cheering" + 0.033*"crowd" + 0.026*"election" + 0.025*"despite"')
+(2, '0.040*"reported" + 0.031*"researchers" + 0.031*"clinical" + 0.031*"trial" + 0.031*"regular"')
+(3, '0.050*"public" + 0.036*"protests" + 0.036*"amid" + 0.032*"signed" + 0.032*"countries"')
+(4, '0.032*"announced" + 0.032*"update" + 0.032*"cybersecurity" + 0.032*"servers" + 0.027*"new"')

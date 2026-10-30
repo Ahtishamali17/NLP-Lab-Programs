@@ -1,0 +1,52 @@
+
+========================================================================
+1. FSM definition
+========================================================================
+States: ['B_invoice', 'B_letter', 'B_research_paper', 'B_resume', 'I_invoice', 'I_letter', 'I_research_paper', 'I_resume']
+Legal transitions: 40 of 64   |   legal start states: ['B_invoice', 'B_letter', 'B_research_paper', 'B_resume']
+
+========================================================================
+2. Probabilistic part: P(state | page text), priors and transition probabilities
+========================================================================
+Prior P(state): {'B_invoice': 0.103, 'B_letter': 0.085, 'B_research_paper': 0.105, 'B_resume': 0.103, 'I_invoice': 0.121, 'I_letter': 0.138, 'I_research_paper': 0.167, 'I_resume': 0.179}
+P(I_invoice | B_invoice) = 0.591   P(I_invoice | B_resume) = 0.0
+
+========================================================================
+3. Decoding the test stream
+========================================================================
+Validation accuracy for emission weights: {1: 0.945, 2: 0.966, 3: 0.986, 5: 0.986} -> chosen w = 3
+page truth             greedy            hybrid (FSM+Viterbi)
+0    B_invoice         B_invoice         B_invoice
+1    B_invoice         B_invoice         B_invoice
+2    B_invoice         B_invoice         B_invoice
+3    B_letter          B_letter          B_letter
+4    I_letter          I_letter          I_letter
+5    B_resume          B_resume          B_resume
+6    I_resume          I_research_paper  I_resume
+29   I_invoice         I_letter          I_invoice
+31   I_invoice         I_research_paper  I_invoice
+34   I_invoice         I_research_paper  I_invoice
+37   B_research_paper  B_research_paper  I_research_paper   <-- error
+42   B_resume          I_resume          B_resume
+47   I_research_paper  I_letter          I_research_paper
+52   I_invoice         I_resume          B_resume   <-- error
+
+========================================================================
+4. Evaluation
+========================================================================
+Greedy (no FSM)        boundary P=0.983 R=0.983 F1=0.983 | state accuracy=0.890 | illegal transitions=25
+Hybrid FSM + Viterbi   boundary P=0.983 R=0.983 F1=0.983 | state accuracy=0.982 | illegal transitions=0
+
+========================================================================
+5. Documents recovered by the hybrid model
+========================================================================
+Predicted 60 documents; ground truth 60
+  doc 1: pages 0-0  type = invoice
+  doc 2: pages 1-1  type = invoice
+  doc 3: pages 2-2  type = invoice
+  doc 4: pages 3-4  type = letter
+  doc 5: pages 5-7  type = resume
+  doc 6: pages 8-9  type = resume
+
+The FSM guarantees a legal output (never an 'I' page of a different type than its document); Viterbi finds the
+globally most probable legal sequence instead of trusting every noisy per-page decision.

@@ -1,0 +1,64 @@
+INPUT TEXT:
+ Dr. A. P. J. Abdul Kalam was born in Rameswaram, Tamil Nadu on 15 October 1931. He served as the 11th President of India from 2002 to 2007. Natural Language Processing (NLP) helps computers understand human language! Isn't it amazing? Google and Microsoft invest billions of dollars in AI research, and NIET in Greater Noida teaches it too.
+
+========================================================================
+NLTK - sentence tokenization
+========================================================================
+1. Dr. A. P. J. Abdul Kalam was born in Rameswaram, Tamil Nadu on 15 October 1931.
+2. He served as the 11th President of India from 2002 to 2007.
+3. Natural Language Processing (NLP) helps computers understand human language!
+4. Isn't it amazing?
+5. Google and Microsoft invest billions of dollars in AI research, and NIET in Greater Noida teaches it too.
+
+========================================================================
+NLTK - word tokenization
+========================================================================
+['Dr.', 'A.', 'P.', 'J.', 'Abdul', 'Kalam', 'was', 'born', 'in', 'Rameswaram', ',', 'Tamil', 'Nadu', 'on', '15', 'October', '1931', '.', 'He', 'served', 'as', 'the', '11th', 'President', 'of', 'India', 'from', '2002', 'to', '2007', '.', 'Natural', 'Language', 'Processing', '(', 'NLP', ')', 'helps', 'computers', 'understand', 'human', 'language', '!', 'Is', "n't", 'it', 'amazing', '?', 'Google', 'and', 'Microsoft', 'invest', 'billions', 'of', 'dollars', 'in', 'AI', 'research', ',', 'and', 'NIET', 'in', 'Greater', 'Noida', 'teaches', 'it', 'too', '.']
+
+========================================================================
+Other NLTK tokenizers
+========================================================================
+WordPunct : ['Don', "'", 't', 'stop', '-', 'believing', ',', 'NLP', "'", 's', 'fun', '!']
+Tweet     : ['Loving', '#NLP', 'lab', ':)', '@ruchika', 'http://niet.co.in']
+Regexp    : ['Dr', 'A', 'P', 'J', 'Abdul', 'Kalam', 'was', 'born', 'in', 'Rameswaram', 'Tamil', 'Nadu'] ...
+
+========================================================================
+spaCy - sentence tokenization
+========================================================================
+1. Dr. A. P. J. Abdul Kalam was born in Rameswaram, Tamil Nadu on 15 October 1931.
+2. He served as the 11th President of India from 2002 to 2007.
+3. Natural Language Processing (NLP) helps computers understand human language!
+4. Isn't it amazing?
+5. Google and Microsoft invest billions of dollars in AI research, and NIET in Greater Noida teaches it too.
+
+========================================================================
+spaCy - word tokenization (with token attributes)
+========================================================================
+TOKEN         IS_ALPHA  IS_PUNCT  LIKE_NUM  
+Dr.           False     False     False     
+A.            False     False     False     
+P.            False     False     False     
+J.            False     False     False     
+Abdul         True      False     False     
+Kalam         True      False     False     
+was           True      False     False     
+born          True      False     False     
+in            True      False     False     
+Rameswaram    True      False     False     
+,             False     True      False     
+Tamil         True      False     False     
+Nadu          True      False     False     
+on            True      False     False     
+15            False     False     True      
+October       True      False     False     
+1931          False     False     True      
+.             False     True      False     
+He            True      False     False     
+served        True      False     False     
+
+========================================================================
+Comparison
+========================================================================
+NLTK  : 5 sentences, 68 tokens
+spaCy : 5 sentences, 68 tokens
+Note: NLTK splits "Isn't" -> ['Is', "n't"]; spaCy does the same, but they differ on 'Dr.' and abbreviations.

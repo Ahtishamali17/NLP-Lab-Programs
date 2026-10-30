@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.vscode/
+.ipynb_checkpoints/
+.DS_Store
+# large artefacts produced by the programs (re-created by running them)
+outputs/24_finetuned_model/
+outputs/26_gpt2_finetuned/
+outputs/*.model
+outputs/*.model.*
+outputs/*.keras
+outputs/*.joblib
+data/glove.6B.*

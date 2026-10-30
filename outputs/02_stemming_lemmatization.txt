@@ -1,0 +1,37 @@
+
+========================================================================
+Stemming vs Lemmatization
+========================================================================
+WORD        PORTER     LANCASTER  SNOWBALL   WN-LEMMA   WN-LEMMA(POS)  SPACY
+the         the        the        the        the        the            the
+children    children   childr     children   child      child          child
+were        were       wer        were       were       be             be
+running     run        run        run        running    run            run
+faster      faster     fast       faster     faster     faster         fast
+and         and        and        and        and        and            and
+studying    studi      study      studi      studying   study          study
+better      better     bet        better     better     good           well
+programs    program    program    program    program    program        program
+while       while      whil       while      while      while          while
+the         the        the        the        the        the            the
+mice        mice       mic        mice       mouse      mouse          mouse
+are         are        ar         are        are        be             be
+eating      eat        eat        eat        eating     eat            eat
+cheeses     chees      chees      chees      cheese     cheese         cheese
+
+========================================================================
+Special cases
+========================================================================
+better     stem=better    lemma(noun)=better    lemma(verb)=better    lemma(adj)=good
+mice       stem=mice      lemma(noun)=mouse     lemma(verb)=mice      lemma(adj)=mice
+geese      stem=gees      lemma(noun)=goose     lemma(verb)=geese     lemma(adj)=geese
+was        stem=wa        lemma(noun)=wa        lemma(verb)=be        lemma(adj)=was
+studies    stem=studi     lemma(noun)=study     lemma(verb)=study     lemma(adj)=studies
+caring     stem=care      lemma(noun)=caring    lemma(verb)=care      lemma(adj)=caring
+happily    stem=happili   lemma(noun)=happily   lemma(verb)=happily   lemma(adj)=happily
+
+========================================================================
+Observation
+========================================================================
+* Stemming is fast but may give non-words (studies -> studi).
+* Lemmatization returns valid dictionary words and needs the POS tag (better -> good only as adjective).

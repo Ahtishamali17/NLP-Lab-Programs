@@ -1,0 +1,46 @@
+40 sentences, e.g. ['natural', 'language', 'processing', 'is', 'branch', 'of', 'artificial', 'intelligence', 'that', 'deals', 'with', 'human', 'language']
+Vocabulary size: 199
+
+========================================================================
+Vector of the word 'king' (first 10 of 50 dimensions)
+========================================================================
+[ 0.079 -0.339 -0.464 -0.167  0.108  0.141  0.083  0.12  -0.288  0.122]
+
+========================================================================
+CBOW: most similar words
+========================================================================
+king    -> [('queen', 0.97), ('daughter', 0.95), ('son', 0.95), ('prince', 0.95)]
+cricket -> [('celebrated', 0.96), ('team', 0.95), ('match', 0.95), ('fans', 0.95)]
+python  -> [('write', 0.97), ('lab', 0.97), ('code', 0.96), ('computer', 0.93)]
+doctor  -> [('hospital', 1.0), ('patient', 0.99), ('nurse', 0.99), ('treats', 0.99)]
+
+========================================================================
+Skip-gram: most similar words
+========================================================================
+king    -> [('queen', 0.99), ('daughter', 0.92), ('rules', 0.91), ('kingdom', 0.91)]
+cricket -> [('team', 0.9), ('sport', 0.88), ('won', 0.88), ('match', 0.87)]
+python  -> [('write', 0.9), ('code', 0.9), ('lab', 0.89), ('science', 0.82)]
+doctor  -> [('hospital', 1.0), ('patient', 0.99), ('nurse', 0.99), ('helps', 0.99)]
+
+========================================================================
+Similarity scores (Skip-gram)
+========================================================================
+similarity(king, queen) = 0.989
+similarity(man, woman) = 0.989
+similarity(cricket, football) = 0.526
+similarity(king, doctor) = 0.331
+similarity(python, java) = 0.662
+
+========================================================================
+Odd one out
+========================================================================
+cricket
+
+========================================================================
+Analogy: king - man + woman
+========================================================================
+[('queen', 0.97709721326828), ('daughter', 0.9025100469589233), ('rules', 0.9022717475891113)]
+(a corpus of 40 sentences is tiny, so analogies are noisy - see Program 13 for real GloVe vectors)
+
+Model saved to outputs/word2vec_custom.model
+Plot saved to outputs/12_word2vec_pca.png

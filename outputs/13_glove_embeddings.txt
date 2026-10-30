@@ -1,0 +1,40 @@
+[info] loading glove-wiki-gigaword-50 via gensim downloader ...
+Loaded 400000 word vectors of dimension 50
+
+========================================================================
+Vector representation of the word 'computer'
+========================================================================
+shape : (50,)
+values: [ 0.079 -0.815  1.79   0.917  0.108 -0.556 -0.844 -1.495  0.134  0.636] ...
+L2 norm: 5.953
+
+========================================================================
+Cosine similarity
+========================================================================
+similarity(king  ,queen  ) = 0.784
+similarity(india ,delhi  ) = 0.814
+similarity(cat   ,dog    ) = 0.922
+similarity(good  ,bad    ) = 0.796
+similarity(car   ,banana ) = 0.219
+
+========================================================================
+Nearest neighbours
+========================================================================
+india   -> ['indian', 'pakistan', 'malaysia', 'bangladesh', 'delhi', 'indonesia']
+python  -> ['reticulated', 'spamalot', 'php', 'owl', 'mouse', 'reticulatus']
+doctor  -> ['nurse', 'physician', 'patient', 'child', 'teacher', 'surgeon']
+happy   -> ["'m", 'everyone', 'everybody', 'really', 'me', 'definitely']
+
+========================================================================
+Analogies  (a - b + c)
+========================================================================
+king - man + woman   = [('queen', 0.8523604273796082), ('throne', 0.7664334177970886), ('prince', 0.7592144012451172)]
+paris - france + india = [('delhi', 0.8888585567474365), ('bombay', 0.8200730085372925), ('mumbai', 0.805435061454773)]
+
+========================================================================
+Sentence vector (average of word vectors)
+========================================================================
+'the cat sat on the mat' vs 'a kitten rested on the rug' : 0.933
+'the cat sat on the mat' vs 'stock prices fell sharply today' : 0.569
+
+Plot saved to outputs/13_glove_pca.png

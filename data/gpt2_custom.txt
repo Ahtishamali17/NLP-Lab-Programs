@@ -1,0 +1,20 @@
+The NLP lab at the college is full of students writing python code.
+Every morning the students open Visual Studio Code and run their programs.
+The teacher explains tokenization, stemming and lemmatization on the whiteboard.
+The students train a classifier and print the accuracy on the screen.
+In the lab the students build a chatbot that answers questions about the college.
+The lab assistant helps the students install nltk, spacy and gensim.
+The students upload every program to GitHub before the deadline.
+The professor checks the repository and reviews the outputs of each program.
+The students fine tune a transformer model on a small custom dataset.
+The attention mechanism helps the model focus on the important words of the sentence.
+The lab is quiet during the exam and the students focus on their programs.
+After the practical file is complete the students feel proud of their work.
+The teacher reminds the students to write clean code and meaningful commit messages.
+The students discuss word embeddings and the meaning of vectors in the library.
+A good dataset is more important than a complicated model, says the professor.
+The students generate text with a language model and laugh at the strange sentences.
+The college in Greater Noida organizes a hackathon on language technology every year.
+The students translate english sentences into hindi using a pretrained model.
+The summary of a long article is created by the model in a few seconds.
+The students learn that every great project begins with a small working program.

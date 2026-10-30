@@ -1,0 +1,26 @@
+[info] loading glove-wiki-gigaword-50 via gensim downloader ...
+
+========================================================================
+Word Mover's Distance (lower = more similar)
+========================================================================
+Reference: Obama speaks to the media in Illinois
+WMD =  0.8515   The President greets the press in Chicago
+WMD =  1.1014   The band gave a concert in Japan
+WMD =  0.0000   Obama speaks to the media in Illinois
+WMD =  1.0676   Students write code in the laboratory
+
+Closest document: Obama speaks to the media in Illinois
+
+========================================================================
+Comparison with BoW cosine similarity (higher = more similar)
+========================================================================
+cosine = 0.000   The President greets the press in Chicago
+cosine = 0.000   The band gave a concert in Japan
+cosine = 1.000   Obama speaks to the media in Illinois
+cosine = 0.000   Students write code in the laboratory
+-> Cosine on BoW gives 0 to the paraphrase (no shared words) but WMD still sees it as closer than the unrelated sentences.
+
+========================================================================
+Cross-check with gensim's built-in wmdistance (needs POT)
+========================================================================
+gensim WMD(s0, paraphrase) = 0.8515

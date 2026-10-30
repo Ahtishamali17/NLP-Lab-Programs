@@ -1,0 +1,80 @@
+
+========================================================================
+1. Chunking with regular expressions (NLTK RegexpParser)
+========================================================================
+Tagged: [('The', 'DT'), ('smart', 'JJ'), ('student', 'NN'), ('wrote', 'VBD'), ('a', 'DT'), ('clean', 'JJ'), ('program', 'NN'), ('in', 'IN'), ('the', 'DT'), ('lab', 'NN')]
+(S
+  (NP The/DT smart/JJ student/NN)
+  (VP
+    wrote/VBD
+    (NP a/DT clean/JJ program/NN)
+    (PP in/IN (NP the/DT lab/NN))))
+                                      S                                              
+           ___________________________|________________                               
+          |                                            VP                            
+          |                     _______________________|______________                
+          |                    |             |                        PP             
+          |                    |             |                   _____|_____          
+          NP                   |             NP                 |           NP       
+   _______|_________           |       ______|_________         |      _____|____     
+The/DT smart/JJ student/NN wrote/VBD a/DT clean/JJ program/NN in/IN the/DT     lab/NN
+
+Noun phrases: ['The smart student', 'a clean program', 'the lab']
+
+========================================================================
+2. Parsing with a Context-Free Grammar (chart parser)
+========================================================================
+Number of valid parse trees (structural ambiguity): 2
+                         S                                   
+       __________________|_______________                     
+      |                                  VP                  
+      |                       ___________|_________           
+      |                      VP                    PP        
+      |              ________|____              ___|___       
+      NP            |             NP           |       NP    
+  ____|______       |     ________|______      |    ___|___   
+Det  Adj     N      V   Det      Adj     N     P  Det      N 
+ |    |      |      |    |        |      |     |   |       |  
+the smart student wrote  a      clean program  in the     lab
+
+             S                                           
+       ______|___________                                 
+      |                  VP                              
+      |              ____|___________                     
+      |             |                NP                  
+      |             |          ______|_________           
+      |             |         |                PP        
+      |             |         |             ___|___       
+      NP            |         NP           |       NP    
+  ____|______       |     ____|______      |    ___|___   
+Det  Adj     N      V   Det  Adj     N     P  Det      N 
+ |    |      |      |    |    |      |     |   |       |  
+the smart student wrote  a  clean program  in the     lab
+
+
+========================================================================
+3. spaCy noun chunks
+========================================================================
+The smart student      root=student   role=nsubj
+a clean program        root=program   role=dobj
+the lab                root=lab       role=pobj
+
+========================================================================
+4. spaCy dependency parse
+========================================================================
+TOKEN     DEP     HEAD      CHILDREN
+The       det     student   []
+smart     amod    student   []
+student   nsubj   wrote     ['The', 'smart']
+wrote     ROOT    wrote     ['student', 'program', 'in']
+a         det     program   []
+clean     amod    program   []
+program   dobj    wrote     ['a', 'clean']
+in        prep    wrote     ['lab']
+the       det     lab       []
+lab       pobj    in        ['the']
+
+========================================================================
+5. Subject - Verb - Object extraction
+========================================================================
+Subject: ['student'] | Verb: wrote | Object: ['program']

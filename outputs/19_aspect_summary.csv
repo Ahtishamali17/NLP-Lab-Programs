@@ -1,0 +1,9 @@
+aspect,mentions,positive_%,negative_%,avg_score
+sound,22,63.6,36.4,0.248
+camera,25,60.0,40.0,0.24
+build,44,56.8,43.2,0.154
+battery,23,52.2,47.8,0.083
+screen,22,50.0,50.0,0.071
+service,21,52.4,47.6,0.053
+price,63,44.4,54.0,-0.099
+delivery,24,29.2,62.5,-0.141

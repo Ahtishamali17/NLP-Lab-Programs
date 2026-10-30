@@ -1,0 +1,56 @@
+88 reviews -> 244 aspect opinions found
+ review_id   aspect                                   clause   score
+         0   camera               Very happy with the camera  0.6115
+         0   screen               Very happy with the screen  0.6115
+         1    price            Worst price I have ever seen. -0.6249
+         1 delivery           Very unhappy with the delivery -0.4754
+         2    price The price is terrible and disappointing. -0.7430
+         2 delivery           Very unhappy with the delivery -0.4754
+         3   screen               Very happy with the screen  0.6115
+         3    price    The price is excellent and I love it.  0.8360
+
+========================================================================
+Aspect level summary
+========================================================================
+          mentions  positive_%  negative_%  avg_score
+aspect                                               
+sound           22        63.6        36.4      0.248
+camera          25        60.0        40.0      0.240
+build           44        56.8        43.2      0.154
+battery         23        52.2        47.8      0.083
+screen          22        50.0        50.0      0.071
+service         21        52.4        47.6      0.053
+price           63        44.4        54.0     -0.099
+delivery        24        29.2        62.5     -0.141
+
+========================================================================
+Text bar chart of average sentiment
+========================================================================
+sound    +++++++ +0.25
+camera   +++++++ +0.24
+build    ++++ +0.15
+battery  ++ +0.08
+screen   ++ +0.07
+service  + +0.05
+price    -- -0.10
+delivery ---- -0.14
+
+========================================================================
+Opinion words used for each aspect
+========================================================================
+sound     [('sound', 19), ('happy', 7), ('great', 4), ('excellent', 3), ('impressive', 3)]
+camera    [('excellent', 6), ('unhappy', 5), ('poor', 4), ('great', 3), ('impressive', 3)]
+build     [('sound', 19), ('happy', 8), ('great', 8), ('terrible', 7), ('disappointing', 7)]
+battery   [('amazing', 5), ('poor', 5), ('happy', 4), ('bad', 3), ('terrible', 2)]
+screen    [('poor', 4), ('amazing', 4), ('terrible', 3), ('disappointing', 3), ('great', 3)]
+service   [('terrible', 4), ('disappointing', 4), ('excellent', 3), ('amazing', 3), ('great', 2)]
+price     [('worth', 22), ('complete', 21), ('terrible', 6), ('disappointing', 6), ('poor', 4)]
+delivery  [('unhappy', 5), ('terrible', 5), ('disappointing', 5), ('excellent', 3), ('bad', 2)]
+
+========================================================================
+Overall verdict
+========================================================================
+Average opinion score = +0.054 -> POSITIVE
+Best aspect : sound | Worst aspect: delivery
+
+Saved outputs/19_aspect_summary.csv and outputs/19_aspect_sentiment.png

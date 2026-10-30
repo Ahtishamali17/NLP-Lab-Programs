@@ -1,0 +1,49 @@
+Sentence: The quick brown fox jumps over the lazy dog while students are learning natural language processing in Noida.
+
+========================================================================
+NLTK POS tagging (Penn Treebank tags)
+========================================================================
+[('The', 'DT'), ('quick', 'JJ'), ('brown', 'NN'), ('fox', 'NN'), ('jumps', 'VBZ'), ('over', 'IN'), ('the', 'DT'), ('lazy', 'JJ'), ('dog', 'NN'), ('while', 'IN'), ('students', 'NNS'), ('are', 'VBP'), ('learning', 'VBG'), ('natural', 'JJ'), ('language', 'NN'), ('processing', 'NN'), ('in', 'IN'), ('Noida', 'NNP'), ('.', '.')]
+
+========================================================================
+NLTK POS tagging (Universal tagset)
+========================================================================
+[('The', 'DET'), ('quick', 'ADJ'), ('brown', 'NOUN'), ('fox', 'NOUN'), ('jumps', 'VERB'), ('over', 'ADP'), ('the', 'DET'), ('lazy', 'ADJ'), ('dog', 'NOUN'), ('while', 'ADP'), ('students', 'NOUN'), ('are', 'VERB'), ('learning', 'VERB'), ('natural', 'ADJ'), ('language', 'NOUN'), ('processing', 'NOUN'), ('in', 'ADP'), ('Noida', 'NOUN'), ('.', '.')]
+
+========================================================================
+spaCy POS tagging
+========================================================================
+TOKEN         UPOS    FINE TAG MEANING
+The           DET     DT       determiner
+quick         ADJ     JJ       adjective (English), other noun-modifier (Chinese)
+brown         ADJ     JJ       adjective (English), other noun-modifier (Chinese)
+fox           NOUN    NN       noun, singular or mass
+jumps         VERB    VBZ      verb, 3rd person singular present
+over          ADP     IN       conjunction, subordinating or preposition
+the           DET     DT       determiner
+lazy          ADJ     JJ       adjective (English), other noun-modifier (Chinese)
+dog           NOUN    NN       noun, singular or mass
+while         SCONJ   IN       conjunction, subordinating or preposition
+students      NOUN    NNS      noun, plural
+are           AUX     VBP      verb, non-3rd person singular present
+learning      VERB    VBG      verb, gerund or present participle
+natural       ADJ     JJ       adjective (English), other noun-modifier (Chinese)
+language      NOUN    NN       noun, singular or mass
+processing    NOUN    NN       noun, singular or mass
+in            ADP     IN       conjunction, subordinating or preposition
+Noida         PROPN   NNP      noun, proper singular
+.             PUNCT   .        punctuation mark, sentence closer
+
+========================================================================
+Tag frequency
+========================================================================
+NLTK : [('NN', 5), ('JJ', 3), ('IN', 3), ('DT', 2), ('VBZ', 1), ('NNS', 1), ('VBP', 1), ('VBG', 1), ('NNP', 1), ('.', 1)]
+spaCy: [('NOUN', 5), ('ADJ', 4), ('DET', 2), ('VERB', 2), ('ADP', 2), ('SCONJ', 1), ('AUX', 1), ('PROPN', 1), ('PUNCT', 1)]
+
+========================================================================
+Ambiguity example - same word, different tags
+========================================================================
+I will book a ticket.        [('book', 'NN')]
+I read a book.               [('book', 'NN')]
+They watch a movie.          [('watch', 'VBP')]
+My watch is new.             [('watch', 'NN')]

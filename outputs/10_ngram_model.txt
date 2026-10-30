@@ -1,0 +1,51 @@
+Corpus: 40 sentences, 478 tokens, vocabulary size 202
+
+========================================================================
+Top unigrams
+========================================================================
+[('the', 72), ('<s>', 40), ('</s>', 40), ('and', 18), ('in', 15), ('a', 14), ('is', 12), ('language', 8), ('of', 7), ('with', 4)]
+
+========================================================================
+Top bigrams
+========================================================================
+[(('<s>', 'the'), 22), (('and', 'the'), 11), (('in', 'the'), 10), (('is', 'a'), 5), (('is', 'the'), 4), (('data', 'and'), 3), (('<s>', 'a'), 3), (('the', 'computer'), 3), (('the', 'king'), 3), (('the', 'queen'), 3)]
+
+========================================================================
+Top trigrams
+========================================================================
+[(('natural', 'language', 'processing'), 2), (('is', 'a', 'popular'), 2), (('the', 'queen', '</s>'), 2), (('in', 'india', 'and'), 2), (('the', 'patient', 'in'), 2), (('patient', 'in', 'the'), 2), (('in', 'the', 'hospital'), 2), (('the', 'hospital', '</s>'), 2)]
+
+========================================================================
+Bigram probabilities
+========================================================================
+P(king     | the     ) = 0.0146
+P(queen    | the     ) = 0.0146
+P(learning | machine ) = 0.0147
+P(zebra    | the     ) = 0.0036
+
+========================================================================
+Next word prediction
+========================================================================
+after 'the': [('computer', 3), ('king', 3), ('queen', 3), ('city', 2)]
+after 'machine': [('learning', 2)]
+after 'natural': [('language', 2)]
+after 'students': [('</s>', 1), ('write', 1), ('in', 1)]
+after 'the king' (trigram): [('rules', 1), ('live', 1), ('and', 1)]
+
+========================================================================
+Generated sentences
+========================================================================
+2-gram model: medicine and the son of the experiment
+2-gram model: a sequence of the patient in the experiment
+2-gram model: word given the computer
+3-gram model: medicine and exercise keep the body healthy
+3-gram model: a language model assigns a probability to a sequence of words
+3-gram model: word embeddings represent words as dense vectors in a vector space
+
+========================================================================
+Perplexity (bigram, Laplace)
+========================================================================
+the king rules the kingdom                 perplexity = 77.0
+kingdom the rules king the                 perplexity = 231.4
+students write python code in the lab      perplexity = 95.9
+(lower perplexity = sentence is more probable under the model)

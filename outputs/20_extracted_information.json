@@ -1,0 +1,130 @@
+{
+  "regex": {
+    "email": [
+      "ruchika@niet.co.in",
+      "sales@dell.com"
+    ],
+    "phone": [
+      "+91-9466775555"
+    ],
+    "url": [
+      "https://www.niet.co.in."
+    ],
+    "date": [
+      "14/03/2025",
+      "14 March 2025",
+      "20-03-2025"
+    ],
+    "money": [
+      "Rs. 18,75,000"
+    ],
+    "invoice_no": [
+      "INV-2025-0457"
+    ]
+  },
+  "entities": [
+    [
+      "14/03/2025",
+      "DATE"
+    ],
+    [
+      "Ruchika Sharma",
+      "PERSON"
+    ],
+    [
+      "Noida Institute of Engineering and Technology",
+      "ORG"
+    ],
+    [
+      "25",
+      "CARDINAL"
+    ],
+    [
+      "Dell India",
+      "ORG"
+    ],
+    [
+      "18,75,000",
+      "CARDINAL"
+    ],
+    [
+      "14 March 2025",
+      "DATE"
+    ],
+    [
+      "Greater Noida",
+      "FAC"
+    ],
+    [
+      "20-03-2025",
+      "DATE"
+    ],
+    [
+      "9466775555",
+      "DATE"
+    ],
+    [
+      "Sundar Pichai",
+      "PERSON"
+    ],
+    [
+      "Google",
+      "ORG"
+    ],
+    [
+      "Hyderabad",
+      "GPE"
+    ]
+  ],
+  "triples": [
+    [
+      "Invoice No : INV-2025 - 0457",
+      "date",
+      "14/03/2025"
+    ],
+    [
+      "Dear Ms. Ruchika Sharma , Noida Institute of Engineering and Technology",
+      "purchase",
+      "25 laptops"
+    ],
+    [
+      "Google",
+      "open",
+      "a new office in Hyderabad"
+    ]
+  ],
+  "structured": {
+    "json": {
+      "name": "Amit Verma",
+      "course": "B.Tech AI",
+      "year": 3,
+      "skills": [
+        "Python",
+        "NLP"
+      ]
+    },
+    "csv": [
+      {
+        "roll": "101",
+        "name": "Neha",
+        "marks": "88"
+      },
+      {
+        "roll": "102",
+        "name": "Ravi",
+        "marks": "74"
+      },
+      {
+        "roll": "103",
+        "name": "Pooja",
+        "marks": "91"
+      }
+    ],
+    "form": {
+      "Name": "Priya Singh",
+      "Department": "Artificial Intelligence",
+      "Email": "priya@niet.co.in",
+      "CGPA": "8.9"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+D1 : Machine learning is a method of data analysis that automates model building
+D2 : Deep learning is a subset of machine learning based on neural networks
+D3 : Cricket is a bat and ball game played between two teams of eleven players
+D4 : The Indian cricket team won the match against Australia in the final
+D5 : The stock market closed higher as investors bought bank shares
+
+========================================================================
+Manual cosine similarity
+========================================================================
+cos(D1, D2) = 0.2515  (both about machine learning)
+cos(D3, D4) = 0.0979  (both about cricket)
+cos(D1, D3) = 0.0  (different topics)
+
+========================================================================
+Similarity matrix (sklearn)
+========================================================================
+       D1     D2     D3     D4   D5
+D1  1.000  0.252  0.000  0.000  0.0
+D2  0.252  1.000  0.000  0.000  0.0
+D3  0.000  0.000  1.000  0.098  0.0
+D4  0.000  0.000  0.098  1.000  0.0
+D5  0.000  0.000  0.000  0.000  1.0
+
+========================================================================
+Most similar pair
+========================================================================
+D1 and D2 with similarity 0.252
+
+========================================================================
+Query ranking
+========================================================================
+Query: neural networks and machine learning models
+  D2  score=0.757  Deep learning is a subset of machine learning based on neura
+  D1  score=0.265  Machine learning is a method of data analysis that automates
+  D5  score=0.000  The stock market closed higher as investors bought bank shar
+  D3  score=0.000  Cricket is a bat and ball game played between two teams of e
+  D4  score=0.000  The Indian cricket team won the match against Australia in t
+
+Cosine distance = 1 - similarity ; value 1 -> same direction, 0 -> nothing in common.

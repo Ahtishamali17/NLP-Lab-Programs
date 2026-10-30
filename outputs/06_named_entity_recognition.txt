@@ -1,0 +1,47 @@
+
+========================================================================
+Entities found
+========================================================================
+ENTITY                                       LABEL     MEANING
+Sundar Pichai                                PERSON    People, including fictional
+Google                                       ORG       Companies, agencies, institutions, etc.
+12 March 2025                                DATE      Absolute or relative dates or periods
+$10 billion                                  MONEY     Monetary values, including unit
+India                                        GPE       Countries, cities, states
+Infosys                                      ORG       Companies, agencies, institutions, etc.
+Bengaluru                                    GPE       Countries, cities, states
+Narendra Modi                                PERSON    People, including fictional
+the Noida Institute of Engineering and TechnologyORG       Companies, agencies, institutions, etc.
+Delhi                                        GPE       Countries, cities, states
+last Monday                                  DATE      Absolute or relative dates or periods
+Tata Motors                                  ORG       Companies, agencies, institutions, etc.
+about 50,000                                 CARDINAL  Numerals that do not fall under another type
+Mumbai                                       GPE       Countries, cities, states
+2024                                         DATE      Absolute or relative dates or periods
+
+========================================================================
+Entity counts by label
+========================================================================
+ORG       4
+GPE       4
+DATE      3
+PERSON    2
+MONEY     1
+CARDINAL  1
+
+========================================================================
+Entities grouped by type
+========================================================================
+PERSON    ['Sundar Pichai', 'Narendra Modi']
+ORG       ['Google', 'Infosys', 'the Noida Institute of Engineering and Technology', 'Tata Motors']
+DATE      ['12 March 2025', 'last Monday', '2024']
+MONEY     ['$10 billion']
+GPE       ['India', 'Bengaluru', 'Delhi', 'Mumbai']
+CARDINAL  ['about 50,000']
+
+========================================================================
+IOB view of first 15 tokens
+========================================================================
+[('Sundar', 'B', 'PERSON'), ('Pichai', 'I', 'PERSON'), (',', 'O', ''), ('the', 'O', ''), ('CEO', 'O', ''), ('of', 'O', ''), ('Google', 'B', 'ORG'), (',', 'O', ''), ('announced', 'O', ''), ('on', 'O', ''), ('12', 'B', 'DATE'), ('March', 'I', 'DATE'), ('2025', 'I', 'DATE'), ('that', 'O', ''), ('the', 'O', '')]
+
+Visualisation saved to /home/claude/NLP-Lab-Programs/outputs/06_ner_visualisation.html (open it in a browser)

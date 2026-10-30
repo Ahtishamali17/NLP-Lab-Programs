@@ -1,0 +1,56 @@
+
+========================================================================
+Manual Bag-of-Words
+========================================================================
+Vocabulary (15 words): ['a', 'and', 'deep', 'fun', 'is', 'lab', 'learning', 'love', 'machine', 'nlp', 'of', 'part', 'programs', 'students', 'useful']
+    a  and  deep  fun  is  lab  ...  nlp  of  part  programs  students  useful
+D1  0    1     0    1   2    0  ...    2   0     0         0         0       1
+D2  0    0     0    1   1    0  ...    0   0     0         0         0       0
+D3  1    0     1    0   1    0  ...    0   1     1         0         0       0
+D4  0    0     0    0   0    1  ...    1   0     0         1         1       0
+
+[4 rows x 15 columns]
+
+========================================================================
+sklearn CountVectorizer
+========================================================================
+    a  and  deep  fun  is  lab  ...  nlp  of  part  programs  students  useful
+D1  0    1     0    1   2    0  ...    2   0     0         0         0       1
+D2  0    0     0    1   1    0  ...    0   0     0         0         0       0
+D3  1    0     1    0   1    0  ...    0   1     1         0         0       0
+D4  0    0     0    0   0    1  ...    1   0     0         1         1       0
+
+[4 rows x 15 columns]
+
+Manual result equals sklearn result: True
+
+========================================================================
+Binary BoW (presence / absence)
+========================================================================
+   a  and  deep  fun  is  lab  ...  nlp  of  part  programs  students  useful
+0  0    1     0    1   1    0  ...    1   0     0         0         0       1
+1  0    0     0    1   1    0  ...    0   0     0         0         0       0
+2  1    0     1    0   1    0  ...    0   1     1         0         0       0
+3  0    0     0    0   0    1  ...    1   0     0         1         1       0
+
+[4 rows x 15 columns]
+
+========================================================================
+Bag of Bigrams (ngram_range=(1,2))
+========================================================================
+Feature count: 21
+['deep' 'deep learning' 'fun' 'fun nlp' 'lab' 'lab programs' 'learning'
+ 'learning fun' 'learning machine' 'love' 'love nlp' 'machine'
+ 'machine learning' 'nlp' 'nlp fun' 'nlp lab' 'nlp useful' 'programs'
+ 'students' 'students love' 'useful']
+
+========================================================================
+Encoding a NEW sentence with the learned vocabulary
+========================================================================
+{'a': np.int64(0), 'and': np.int64(1), 'deep': np.int64(0), 'fun': np.int64(1), 'is': np.int64(2), 'lab': np.int64(2), 'learning': np.int64(0), 'love': np.int64(0), 'machine': np.int64(0), 'nlp': np.int64(1), 'of': np.int64(0), 'part': np.int64(0), 'programs': np.int64(0), 'students': np.int64(0), 'useful': np.int64(1)}
+
+========================================================================
+Sparsity
+========================================================================
+Matrix shape (4, 15), non-zero cells 21, sparsity = 65.0%
+Saved outputs/08_bow_matrix.csv

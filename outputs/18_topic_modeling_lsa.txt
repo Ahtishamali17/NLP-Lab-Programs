@@ -1,0 +1,53 @@
+TF-IDF matrix A: (60, 166)
+
+========================================================================
+Singular values and explained variance
+========================================================================
+Singular values: [2.078 1.93  1.807 1.756 1.737]
+Explained variance ratio: [0.056 0.045 0.041 0.053 0.053] total = 0.249
+
+========================================================================
+Top terms of the 5 latent concepts (rows of V^T)
+========================================================================
+Concept 0: public(+0.30), protests(+0.30), amid(+0.30), neighbouring(+0.29), signed(+0.29), trade(+0.29), agreement(+0.29), countries(+0.29)
+Concept 1: announced(+0.33), update(+0.31), cybersecurity(+0.31), servers(+0.31), cloud(+0.26), provider(+0.26), customers(+0.22), enterprise(+0.22)
+Concept 2: trial(+0.22), clinical(+0.22), reported(+0.22), new(+0.19), doctors(+0.18), health(+0.18), record(+0.16), diabetes(+0.16)
+Concept 3: rivals(+0.28), tournament(+0.28), defeated(+0.28), stadium(+0.25), crowd(+0.25), cheering(+0.25), hockey(+0.21), squad(+0.21)
+Concept 4: report(+0.29), annual(+0.29), according(+0.28), retail(+0.23), control(+0.20), inflation(+0.20), rates(+0.20), raised(+0.20)
+
+========================================================================
+Documents in latent space (first 5)
+========================================================================
+      C0     C1     C2     C3     C4
+0  0.090  0.068  0.476 -0.329 -0.195
+1  0.272  0.084 -0.076  0.032  0.025
+2  0.199  0.083  0.443 -0.286 -0.150
+3  0.069  0.040  0.363 -0.192 -0.185
+4  0.562 -0.044 -0.027 -0.003 -0.001
+
+Dominant concept vs category:
+ category  business  health  politics  sports  technology
+concept                                                 
+0                0       0        12       0           0
+1                0       0         0       0          12
+2                2      12         0       1           0
+3                0       0         0      11           0
+4               10       0         0       0           0
+
+========================================================================
+Query matching in latent space
+========================================================================
+
+Query: cricket team won the match
+   1.00 [sports] The cricket team defeated rivals in the tournament in front of a cheering stadium crowd.
+   1.00 [sports] The hockey squad won the championship match in front of a cheering stadium crowd.
+
+Query: new vaccine for patients
+   0.97 [health] The health ministry developed a new vaccine for infection during the clinical trial.
+   0.97 [health] Doctors treated patients with a new therapy during the clinical trial.
+
+Query: bank interest rates and shares
+   1.00 [business] The stock market raised interest rates to control inflation according to the annual report.
+   1.00 [business] The retail company raised interest rates to control inflation according to the annual report.
+
+LSA vs LDA: LSA is linear algebra (SVD, values can be negative); LDA is probabilistic (topics are distributions).

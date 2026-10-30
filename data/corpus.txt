@@ -1,0 +1,40 @@
+Natural language processing is a branch of artificial intelligence that deals with human language.
+Machine learning models learn patterns from data and make predictions.
+Deep learning uses neural networks with many layers to learn representations.
+A neural network is trained using data and an optimization algorithm.
+The student studies machine learning at the university.
+The teacher teaches natural language processing to the students.
+Students write python code in the computer lab.
+Python is a popular programming language for data science.
+Java is another programming language used for software development.
+The king rules the kingdom with the queen.
+The queen and the king live in the royal palace.
+A man and a woman walk in the city.
+The prince is the son of the king and the princess is the daughter of the queen.
+The boy and the girl play in the garden.
+Cricket is a popular sport in India and the players love the game.
+The cricket team won the match and the fans celebrated.
+Football players score goals in the stadium.
+The coach trains the players for the tournament.
+The doctor treats the patient in the hospital.
+The nurse helps the doctor and the patient in the hospital.
+Medicine and exercise keep the body healthy.
+The bank gives loans and the company pays interest.
+Investors buy shares in the stock market.
+The market grows when the economy improves.
+Delhi is the capital of India and Paris is the capital of France.
+Mumbai is a big city in India and London is a big city in England.
+The river flows through the city and the mountain stands behind the village.
+The farmer grows rice and wheat in the field.
+The computer processes data and the software runs on the computer.
+The engineer builds software and the scientist runs the experiment.
+Words with similar meaning appear in similar context.
+Word embeddings represent words as dense vectors in a vector space.
+The model predicts the next word given the previous words.
+A language model assigns a probability to a sequence of words.
+The chatbot answers questions from the user.
+The translator converts text from one language to another language.
+The search engine ranks documents for the query of the user.
+Sentiment analysis finds whether a review is positive or negative.
+The customer wrote a review about the phone and the battery.
+The professor guides the research students in the laboratory.

@@ -1,0 +1,106 @@
+                                                text  category
+0  Researchers reported a decline in diabetes cas...    health
+1  The election commission announced the election...  politics
+2  Doctors reported a decline in diabetes cases t...    health
+3  The health ministry developed a new vaccine fo...    health
+4  The prime minister proposed reforms in the con...  politics 
+
+Class distribution:
+ category
+health        12
+politics      12
+sports        12
+business      12
+technology    12
+Name: count, dtype: int64
+
+Train size = 45, Test size = 15
+
+========================================================================
+Naive Bayes
+========================================================================
+Test accuracy = 1.000   5-fold CV accuracy = 1.000
+              precision    recall  f1-score   support
+
+    business       1.00      1.00      1.00         3
+      health       1.00      1.00      1.00         3
+    politics       1.00      1.00      1.00         3
+      sports       1.00      1.00      1.00         3
+  technology       1.00      1.00      1.00         3
+
+    accuracy                           1.00        15
+   macro avg       1.00      1.00      1.00        15
+weighted avg       1.00      1.00      1.00        15
+
+Confusion matrix:
+             business  health  politics  sports  technology
+business           3       0         0       0           0
+health             0       3         0       0           0
+politics           0       0         3       0           0
+sports             0       0         0       3           0
+technology         0       0         0       0           3
+
+========================================================================
+Linear SVM
+========================================================================
+Test accuracy = 1.000   5-fold CV accuracy = 1.000
+              precision    recall  f1-score   support
+
+    business       1.00      1.00      1.00         3
+      health       1.00      1.00      1.00         3
+    politics       1.00      1.00      1.00         3
+      sports       1.00      1.00      1.00         3
+  technology       1.00      1.00      1.00         3
+
+    accuracy                           1.00        15
+   macro avg       1.00      1.00      1.00        15
+weighted avg       1.00      1.00      1.00        15
+
+Confusion matrix:
+             business  health  politics  sports  technology
+business           3       0         0       0           0
+health             0       3         0       0           0
+politics           0       0         3       0           0
+sports             0       0         0       3           0
+technology         0       0         0       0           3
+
+========================================================================
+Logistic Regression
+========================================================================
+Test accuracy = 1.000   5-fold CV accuracy = 1.000
+              precision    recall  f1-score   support
+
+    business       1.00      1.00      1.00         3
+      health       1.00      1.00      1.00         3
+    politics       1.00      1.00      1.00         3
+      sports       1.00      1.00      1.00         3
+  technology       1.00      1.00      1.00         3
+
+    accuracy                           1.00        15
+   macro avg       1.00      1.00      1.00        15
+weighted avg       1.00      1.00      1.00        15
+
+Confusion matrix:
+             business  health  politics  sports  technology
+business           3       0         0       0           0
+health             0       3         0       0           0
+politics           0       0         3       0           0
+sports             0       0         0       3           0
+technology         0       0         0       0           3
+
+========================================================================
+Model comparison
+========================================================================
+Naive Bayes            test=1.000  cv=1.000
+Linear SVM             test=1.000  cv=1.000
+Logistic Regression    test=1.000  cv=1.000
+
+========================================================================
+Predicting unseen sentences (SVM)
+========================================================================
+sports       <- The batsman hit a century in the cricket final
+health       <- Doctors discovered a new treatment for cancer patients
+technology   <- The software startup released a machine learning platform for cloud customers
+business     <- Shares and bank profits rose in the market
+
+Model saved to outputs/15_news_classifier.joblib

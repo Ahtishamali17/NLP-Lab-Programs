@@ -1,0 +1,49 @@
+Training pages: 371   Test pages: 115 (from 40 documents)
+
+========================================================================
+1. Page level document classification
+========================================================================
+Accuracy: 1.0
+                precision    recall  f1-score   support
+
+       invoice       1.00      1.00      1.00        32
+        letter       1.00      1.00      1.00        44
+research_paper       1.00      1.00      1.00        30
+        resume       1.00      1.00      1.00         9
+
+      accuracy                           1.00       115
+     macro avg       1.00      1.00      1.00       115
+  weighted avg       1.00      1.00      1.00       115
+
+
+========================================================================
+2. Boundary (first page) detection
+========================================================================
+first-page precision = 1.000   recall = 0.825   F1 = 0.904
+
+========================================================================
+3. Separation of the page stream into documents
+========================================================================
+Predicted 39 documents (true number = 40)
+Perfectly separated documents: 38/40 (95.0%)
+
+========================================================================
+4. First 8 predicted documents
+========================================================================
+doc_001  type=invoice         pages=1  (true type: invoice)
+doc_002  type=research_paper  pages=1  (true type: research_paper)
+doc_003  type=research_paper  pages=1  (true type: research_paper)
+doc_004  type=letter          pages=2  (true type: letter)
+doc_005  type=letter          pages=3  (true type: letter)
+doc_006  type=letter          pages=2  (true type: letter)
+doc_007  type=letter          pages=4  (true type: letter)
+doc_008  type=invoice         pages=3  (true type: invoice)
+
+39 separated documents written to /home/claude/NLP-Lab-Programs/outputs/31_separated_documents
+
+========================================================================
+5. Predict a brand new batch
+========================================================================
+invoice         first_page=True   <- invoice number 4411 bill to customer amount due payment terms item qua...
+invoice         first_page=False  <- item quantity unit price subtotal discount shipping total amount rupee...
+resume          first_page=True   <- curriculum vitae career objective email phone experience skills python...
