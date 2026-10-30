@@ -1,7 +1,7 @@
 # Natural Language Processing (NLP) Lab - Practical File
 
 **Department of Artificial Intelligence, Noida Institute of Engineering and Technology (NIET), Greater Noida**
-**Course faculty:** Ms. Ruchika (Assistant Professor)  |  **Submission deadline:** 31 October 2026
+**Course faculty:** Ms. Ruchika (Assistant Professor)  
 
 | | |
 |---|---|
