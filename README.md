@@ -3,12 +3,7 @@
 **Department of Artificial Intelligence, Noida Institute of Engineering and Technology (NIET), Greater Noida**
 **Course faculty:** Ms. Ruchika (Assistant Professor)  
 
-| | |
-|---|---|
-| **Name** | `<your name>` |
-| **Roll No.** | `<your roll number>` |
-| **Section / Year** | `<section>` / `<year>` |
-| **GitHub** | `<your repository link>` |
+
 
 This repository contains all **32 programs** of the NLP Lab, organised by Course Outcome (CO). Every program is a
 single, self-contained Python file that starts with an *Aim* and an *Algorithm*, prints readable output, and can be
